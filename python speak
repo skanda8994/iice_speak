@@ -35,8 +35,9 @@ while 1:
 		 os.system("winword")
 	  else:
 		pyttsx3.speak("Im sorry that programm isnt installed in your computer. Do you want me to open the web for you to install the app? Y/N")
-		   x=input()
-		       if x=="Y":
+		   l=input()
+		   x=l.lower()    
+		       if x=="y":
 		       	os.system("msedge")
 		       else:
 		       	pyttsx3.speak("Ok.")
