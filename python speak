@@ -1,0 +1,44 @@
+import pyttsx3
+import os
+import datetime
+#Program looping starts
+while 1:
+	dt=datetime.datetime.now()
+	ct=dt.hour
+	if ct > 6 and ct < 12:
+	     pyttsx3.speak("Hello. Good morning!      	What do you want me to do?")
+	elif ct >= 12 and ct < 17:
+	      pyttsx3.speak("Hello. Good Afternoon! What do you want me to do?")
+	 elif ct >=17 and  ct < 22:
+	      pyttsx3.speak("Hello.Good Evening! What do you want me to do?")
+	  else:
+	  	pyttsx3.speak("Hello. What do you want me to do?")
+	i=input()
+	p=i.lower()
+     if (("open" in p or "run" in p or "execute" in p) or ("notepad" in p or "text editor" in p or "text file" in p or "blank text" in p)):
+		pyttsx3.speak("opening notepad")
+		os.system("notepad")
+	elif (("open" in p or "run" in p or "execute" in p "access internet" in p) or ("default browser" in p or "browser" in p or "microsoft edge" in p or "edge" in p)):
+		pyttsx3.speak("opening web browser")
+		os.system("msedge")
+	elif (("open" in p or "run" in p or "execute" in p) or ("skype" in p or "video caller" in p or "video" in p)):
+		pyttsx3.speak("opening skype")
+		os.system("skype")
+	elif (("open" in p or "run" in p or "execute" in p) or ("steam" in p)):
+		pyttsx3.speak("opening steam client")
+		os.system("steam")
+	elif (("open" in p or "run" in p or "execute" in p") or ("mail" in p)):
+		pyttsx3.speak("Opening Google Mail")
+		os.system("msedge gmail.com")
+	elif ("open" in p or "run" in p or "execute" in p or "msword" in p or "word" in p or "microsoft word" in p):
+		 pyttsx3.speak("Opening Microsoft Word")
+		 os.system("winword")
+	else:
+		pyttsx3.speak("Im sorry that programm isnt installed in your computer. Do you want me to open the web for you to install the app? Y/N")
+		 x=input()
+		       if x=="Y":
+		       	os.system("msedge")
+		       else:
+		       	pyttsx3.speak("Ok.")
+		       
+		       	
